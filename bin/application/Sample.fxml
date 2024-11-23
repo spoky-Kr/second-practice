@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.SampleController">
+   <center>
+      <AnchorPane prefHeight="600.0" prefWidth="700.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label layoutX="176.0" layoutY="50.0" prefHeight="32.0" prefWidth="347.0" text="Параметры спутника Беркут-С">
+               <font>
+                  <Font name="System Italic" size="22.0" />
+               </font>
+            </Label>
+            <TableView fx:id="tableView_main" layoutX="22.0" layoutY="132.0" prefHeight="390.0" prefWidth="659.0">
+              <columns>
+                <TableColumn fx:id="col_numPackage" prefWidth="95.20001029968262" text="Номер пакета" />
+                <TableColumn fx:id="col_numSystem" prefWidth="102.40003204345703" text="Номер системы" />
+                  <TableColumn fx:id="col_time" prefWidth="68.79998779296875" text="Время" />
+                  <TableColumn fx:id="col_coordinates" prefWidth="103.20001220703125" text="Координаты " />
+                  <TableColumn fx:id="col_amperage" prefWidth="130.39999389648438" text="Сила тока в системе" />
+                  <TableColumn fx:id="col_temp" prefWidth="159.99993896484375" text="Температура в системе" />
+              </columns>
+            </TableView>
+            <Button fx:id="Button_showParameters" layoutX="536.0" layoutY="548.0" mnemonicParsing="false" onAction="#on_Button_showParameters" text="Показать параметры" />
+            <Button fx:id="Button_hideParameters" layoutX="402.0" layoutY="548.0" mnemonicParsing="false" onAction="#on_Button_hideParameters" text="Скрыть параметры" />
+            <Button fx:id="Button_binaryText" layoutX="247.0" layoutY="548.0" mnemonicParsing="false" onAction="#on_Button_binaryText" text="Исходный код пакетов" />
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>
